@@ -11,7 +11,7 @@ def contact_view(request):
         message = request.POST.get('message')
         phone_number = request.POST.get('phone_number', '')  # Optional, default to empty string
         address = request.POST.get('address', '')  # Optional, default to empty string
-
+        
         # Option 1: Use a form for validation and saving
         form = ContactForm(request.POST)
         if form.is_valid():
