@@ -1,1 +1,0 @@
-I have been actively practicing and developing projects using online resources, which has involved modifying existing code and creating new projects. By reusing and adapting code, I’ve been able to generate innovative ideas and implement them effectively. This approach demonstrates my ability to leverage existing resources creatively and contribute new solutions.
