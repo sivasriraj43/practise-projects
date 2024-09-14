@@ -1,0 +1,65 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white justify-content-center">
+
+
+    <a class="navbar-brand main-heading" href="{% url 'dashboard' %}"> 
+            
+    &nbsp; SecureX 
+    
+    </a>
+
+</nav>
+
+<br>
+
+<div class="container bg-white shadow-md p-5 form-layout">
+
+    <h4> Welcome {{user}} </h4>
+
+    <p> This is the dashboard </p>
+
+    <hr>
+
+    <a class="btn btn-info" type="button"  href="{% url 'user-logout' %}">Logout</a>
+
+</div>
+
+<br>
+
+<div class="container bg-white shadow-md p-5 form-layout">
+
+    <h4> About SecureX </h4>
+
+    <p> SecureX is the most secure website in the world! </p>
+
+</div>
+
+<br>
+
+<div class="container bg-white shadow-md p-5 form-layout">
+
+    <h4> 2FA </h4>
+
+    <p> Two-factor authentication provides users with extra security </p>
+
+    <hr>
+
+    <a class="btn btn-danger" type="button"  href="{% url 'two_factor:setup' %}"> Enable 2FA </a>
+    
+    <br> <br>
+
+    <a class="btn btn-primary" type="button"  href="{% url 'two_factor:profile' %}"> 2FA account settings </a>
+
+
+</div>
+
+<br>
+
+{{ redirect_to_login_immediately }}
+
+{% endblock %}
+
