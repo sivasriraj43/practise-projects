@@ -1,0 +1,66 @@
+
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <title> SecureX | Login </title>
+
+        <meta charset="utf-8" />
+
+        <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1"/>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/lux/bootstrap.min.css">
+
+        
+    </head>
+
+    <style type="text/css">
+
+        body{
+            background-color: #f0f0f0;
+        }
+
+    </style>
+
+    <!-- Messages -->
+
+    {% for message in messages %}
+
+      <p class="alert alert-info float-center text-center {{message.tags}}"> 
+        
+        <i class="fa fa-clock-o" aria-hidden="true"></i> &nbsp; {{message}} 
+      
+      </p>
+
+    {% endfor %}
+
+  <br>
+
+  <body>
+ 
+    {% block content_wrapper %}
+      
+      <div class="container">
+      
+          {% block content %} {% endblock %}
+
+        </div>
+
+      {% endblock %}
+
+    
+
+  </body>
+
+
+  <script src="{% static 'js/app.js' %}"></script>
+
+</html>
