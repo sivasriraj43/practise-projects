@@ -10,6 +10,7 @@ public class StringBuilder {
 		sb2.insert(0,'A');
 		sb2.delete(2,4);
 		sb2.deleteCharAt(5);
+<<<<<<< HEAD
 		
 		System.out.println(sb2);
 		sb2.reverse();
@@ -20,6 +21,13 @@ public class StringBuilder {
 		System.out.println("sb2: "+sb2);
 		String str = sb2.toString();
 		System.out.println();("String : "+str);
+=======
+		System.out.println(sb2);
+		
+		
+		System.out.println("sb1: "+sb1);
+		System.out.println("sb2: "+sb2);
+>>>>>>> 5daebef9 (problem solving day 2)
 
 
 	}
