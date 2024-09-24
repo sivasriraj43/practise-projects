@@ -18,3 +18,11 @@ public class Array {
 
     }
 }
+<<<<<<< HEAD
+=======
+
+// Fixed size, elements of the same data type
+// Accessed by index
+// Useful for static data
+
+>>>>>>> e58eb147 (problem solving started)
