@@ -36,7 +36,8 @@ class GetSubjectTest(APITestCase):
         self.assertEqual(response.data['subjects'],serializer.data)
 
 
-        from django.test import TestCase
+
+from django.test import TestCase
 from django.contrib.auth import get_user_model
 from api.models import College ,Student,Teacher,Program # Assuming you have a College model
 from unittest.mock import patch
@@ -188,3 +189,6 @@ class UserCreationSignalTest(TestCase):
         self.assertFalse(Student.objects.filter(user=user).exists())
         self.assertFalse(Teacher.objects.filter(user=user).exists())
 
+
+
+list
