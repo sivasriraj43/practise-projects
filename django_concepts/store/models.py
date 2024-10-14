@@ -16,6 +16,7 @@ class Collection(models.Model):
 class Product(models.Model):
     # sku = models.CharField(max_length=29,primary_key=True)
     title = models.CharField(max_length=200)
+    slug = models.SlugField()
     description = models.TextField()
     price = models.DecimalField(max_digits=6,decimal_places=2)
     inventory = models.IntegerField()
@@ -32,9 +33,15 @@ class Customer(models.Model):
     first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=100)
     email = models.EmailField(max_length=300,unique=True)
-    phone = models.IntegerField(max_length=10)
+    phone = models.CharField(max_length=255)
     birh_date = models.DateField(null=True,blank=True)
     membership = models.CharField(max_length=1,choices=MEMBERSHIP_CHOICES,default='B')
+
+    class Meta:
+        db_table = 'store_customers'
+        indexes = [
+            models.Index(fields=['last_name','first_name'])
+        ]
 
 class Order(models.Model):
     PAYMENT_STATUS_CHOICES =[
@@ -68,4 +75,6 @@ class CartItem(models.Model):
     cart = models.ForeignKey(Cart,on_delete=models.CASCADE)
     product = models.ForeignKey(Product,on_delete=models.CASCADE)
     quantity = models.PositiveSmallIntegerField()
+
+
 
